@@ -26,7 +26,7 @@ class GUI:
         self.client_socket.connect((remote_ip, remote_port)) #connect to the remote server
 
     def initialize_gui(self): # GUI initializer
-        self.root.title("Secure Chat App") 
+        self.root.title("Socket Chat") 
         self.root.resizable(0, 0)
         self.display_chat_box()
         self.display_name_section()
@@ -62,7 +62,7 @@ class GUI:
         self.join_button = Button(frame, text="Join", width=10, command=self.on_join).pack(side='left')
         frame.pack(side='top', anchor='nw')
 
-    def display_chat_bosx(self):
+    def display_chat_box(self):
         frame = Frame()
         Label(frame, text='Chat Box:', font=("Serif", 12)).pack(side='top', anchor='w')
         self.chat_transcript_area = Text(frame, width=60, height=10, font=("Serif", 12))
